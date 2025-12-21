@@ -1,0 +1,309 @@
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: #000;
+  color: #eee;
+  scroll-behavior: smooth;
+}
+
+/* Links */
+a {
+  color: #f5c400;
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.8;
+}
+
+/* Container padrão */
+.container {
+  width: 90%;
+  max-width: 1280px;
+  margin: auto;
+}
+
+/* ================================
+   HEADER
+================================ */
+.site-header {
+  background: #0c0c0c;
+  padding: 20px 0;
+  border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #f5c400;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.logo .jk {
+  color: #fff;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  gap: 24px;
+}
+
+.nav a {
+  font-weight: 500;
+  color: #f5c400;
+}
+
+.nav.open {
+  display: block;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #f5c400;
+  cursor: pointer;
+}
+
+/* MOBILE HEADER */
+@media (max-width: 760px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #0c0c0c;
+    padding: 16px;
+    margin-top: 16px;
+    border: 1px solid #222;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* ================================
+   HERO
+================================ */
+.hero {
+  padding: 80px 0;
+  background: linear-gradient(180deg, #000, #0c0c0c);
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-content {
+  max-width: 560px;
+}
+
+.eyebrow {
+  color: #f5c400;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #f5c400;
+  margin-bottom: 20px;
+}
+
+.lead {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 24px;
+}
+
+/* BOTÕES */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: #f5c400;
+  color: #000;
+}
+
+.btn.ghost {
+  border: 2px solid #f5c400;
+  color: #f5c400;
+  background: transparent;
+}
+
+.btn-outline {
+  margin-top: 12px;
+  padding: 8px 14px;
+  border: 1px solid #f5c400;
+  color: #f5c400;
+  background: transparent;
+}
+
+/* HERO IMG */
+.hero-img {
+  width: 420px;
+  border-radius: 10px;
+  border: 2px solid #333;
+}
+
+@media (max-width: 860px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+}
+
+/* ================================
+   SEÇÃO COLEÇÃO
+================================ */
+.section-header {
+  margin-bottom: 32px;
+}
+
+.section-header h3 {
+  color: #f5c400;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.section-sub {
+  color: #ccc;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+}
+
+/* CARD */
+.card {
+  background: #0e0e0e;
+  border: 1px solid #222;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 14px #f5c40040;
+}
+
+.product-media img {
+  width: 100%;
+  display: block;
+}
+
+.card-body {
+  padding: 18px;
+}
+
+.product-title {
+  color: #f5c400;
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+}
+
+.meta {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-bottom: 8px;
+}
+
+.price {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+/* ================================
+   MINI CARDS — LANÇAMENTOS
+================================ */
+.small-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.mini-card {
+  background: #111;
+  border: 1px solid #222;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.mini-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.mini-body h5 {
+  color: #f5c400;
+  margin-top: 10px;
+}
+
+/* ================================
+   SOBRE / CONTATO
+================================ */
+.sobre, .contato {
+  padding: 40px 0;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  background: #111;
+  border: 1px solid #333;
+  color: #eee;
+}
+
+/* ================================
+   FOOTER
+================================ */
+.site-footer {
+  padding: 30px 0;
+  background: #0c0c0c;
+  border-top: 1px solid #222;
+  text-align: center;
+}
+
+.footer-inner p {
+  color: #ccc;
+                                }
